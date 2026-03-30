@@ -15,7 +15,7 @@ const RegisterPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [strength, setStrength] = useState(0);
 
-  const { register, setCurrentPage, isAlert, setIsAlert, setAlertType } =
+  const { register, setCurrentPage, setIsAlert, setAlertType } =
     useContext(AuthContext);
 
   const checkStrength = (value) => {
