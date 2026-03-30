@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(16, 16, 16, 1);
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1280px;
+  margin: 0px auto;
+}
