@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import LoginPage from './components/Login/Login';
 import MainPage from './components/Main/MainPage';
 import { Alert, Snackbar, Fade } from '@mui/material';
@@ -15,9 +15,7 @@ function AppContent() {
     login,
     setCurrentPage,
     alertType,
-    setAlertType,
-    loader,
-    setLoader,
+    loader
   } = useContext(AuthContext);
   if (loader) {
     return (

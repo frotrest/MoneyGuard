@@ -1,25 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import AuthContext from './Auth';
 
 const AuthProvider = ({ children }) => {
   const [loader, setLoader] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem("isLogin") === 'true';
+  });
   const [alertType, setAlertType] = useState('error');
   const [isAlert, setIsAlert] = useState('');
-  const [currentPage, setCurrentPage] = useState('login');
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem("isLogin") === 'true' ? 'main' : 'login';
+  });
   const [accounts, setAccounts] = useState([
     { email: 'test@gmail.com', password: 'test' },
     { email: 'roman@gmail.com', password: '12345' },
     { email: 'admin@gmail.com', password: 'admin' },
   ]);
-
-  useEffect(() => {
-    const auth = localStorage.getItem('isLogin');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-      setCurrentPage('main');
-    }
-  }, []);
 
   const login = async (email, password) => {
     setLoader(true);
