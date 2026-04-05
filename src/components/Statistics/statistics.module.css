@@ -1,0 +1,106 @@
+.statisticsContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+.statisticsMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.statisticsTransactions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.statisticsMainTitle {
+  color: rgba(251, 251, 251, 1);
+  font-family: 'Poppins';
+  font-style: Regular;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.financeTable {
+  width: 350px !important;
+}
+
+.financeTableHead {
+  border-radius: 8px;
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(100px);
+  background: rgba(82, 59, 126, 0.6);
+  width: 100%;
+}
+
+.financeTableHeadRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.financeTableHeadRowItem {
+  color: rgba(251, 251, 251, 1) !important;
+  font-family: 'Poppins' !important;
+  font-style: SemiBold !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  letter-spacing: 0% !important;
+  border: none !important;
+}
+
+.financeTableBodyRow {
+  display: flex;
+  align-items: center;
+}
+
+.financeTableBodyRowItem {
+  color: rgba(251, 251, 251, 1) !important;
+  font-family: 'Poppins' !important;
+  font-style: Regular !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 21px !important;
+  letter-spacing: 0% !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.41) !important;
+}
+
+.statisticsCommonTransaction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.statisticsCommonTransactionTitle {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(251, 251, 251, 1);
+  font-family: 'Poppins';
+  font-style: SemiBold;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0%;
+  margin: 0px;
+  width: inherit;
+}
+
+.statisticsCommonTransactionTitleExpense {
+  color: rgba(255, 134, 141, 1);
+}
+
+.statisticsCommonTransactionTitleIncome {
+  color: rgba(255, 182, 39, 1);
+}

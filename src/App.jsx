@@ -6,6 +6,9 @@ import RegisterPage from './components/Register/Register';
 import AuthContext from './Contexts/Auth';
 import AuthProvider from './Contexts/AuthProvider';
 import CircularProgress from '@mui/material/CircularProgress';
+import { useAnimateOnScroll } from './AnimateWatcher';
+import BalanceProvider from './Contexts/BalanceProvider';
+import ModalProvider from './Contexts/ModalProvider';
 
 function AppContent() {
   const {
@@ -15,8 +18,9 @@ function AppContent() {
     login,
     setCurrentPage,
     alertType,
-    loader
+    loader,
   } = useContext(AuthContext);
+  useAnimateOnScroll([currentPage]);
   if (loader) {
     return (
       <div
@@ -72,7 +76,11 @@ function AppContent() {
 const App = () => {
   return (
     <AuthProvider>
-      <AppContent />
+      <BalanceProvider>
+        <ModalProvider>
+          <AppContent />
+        </ModalProvider>
+      </BalanceProvider>
     </AuthProvider>
   );
 };
