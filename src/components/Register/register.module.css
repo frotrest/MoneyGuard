@@ -134,7 +134,6 @@
 .regFormBtn {
   border-radius: 20px;
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
-  background: RGBA(255, 199, 39, 1);
   background: linear-gradient(
     90deg,
     rgba(255, 199, 39, 1) 0%,
