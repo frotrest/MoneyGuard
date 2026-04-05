@@ -146,7 +146,7 @@ const CurrencyChart = () => {
     },
     elements: {
       line: {
-        tension: 0.4, // сглаживание
+        tension: 0.4,
       },
     },
   };
