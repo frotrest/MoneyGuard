@@ -1,18 +1,61 @@
-# React + Vite
+# Project Overview
+Personal Finance Tracker is a adaptive single page application for tracking personal income and expenses, viewing transaction history, and visualizing basic financial statistics and currency rates. The project is designed as a learning pet project that demonstrates practical React patterns, adaptive UI and integration with external APIs.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
 
-Currently, two official plugins are available:
+Provide a compact, usable interface for adding, editing, and deleting transactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+** I created an internal switch system in the application using if checks, but I’ll fix it in the future. **
 
-## React Compiler
+Serve as a portfolio piece showing frontend architecture, responsive design, and integration with third‑party services.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Features
+Core Functionality
 
-Note: This will impact Vite dev & build performances.
+Transaction CRUD: create, edit, delete transactions with fields: date, type (income/expense), category, comment, amount.
 
-## Expanding the ESLint configuration
+Responsive Views: desktop uses a table layout; mobile uses card layout and a compact finances view.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Statistics: category summaries and charts for quick insights.
+
+Currency Rates: fetches latest exchange rates and shows purchase/sale values.
+
+Animations on Scroll: elements annotated with data-animate are animated when they enter the viewport using IntersectionObserver.
+
+Accessible Actions: edit and delete actions per transaction with clear visual affordances.
+
+## UX Details
+
+Color coding for income vs expense.
+
+Modal forms for transaction creation and editing.
+
+Sidebar navigation for switching pages.
+
+## React for UI.
+
+MUI for UI primitives and useMediaQuery for responsive logic.
+
+axios for HTTP requests.
+
+CSS Modules for scoped styling.
+
+Chart library (Chart.js ) for graphs.
+
+IntersectionObserver for scroll-triggered animations.
+
+App / MainPage — layout wrapper with Header, SideBar, and a Routes area.
+
+FinanceTable — desktop transaction table.
+
+Finances — mobile-focused finances view with currency rates and compact UI.
+
+Statistics — charts and aggregated data.
+
+CurrencyChart — chart component for currency visualization.
+
+useAnimateOnScroll — custom hook that observes [data-animate] elements.
+
+contexts or hooks — optional global state for transactions and balance.
+
+Keep DOM-manipulating logic inside useEffect.
