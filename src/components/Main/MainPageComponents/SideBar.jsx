@@ -11,6 +11,7 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import CurrencyChart from './Chart';
 import { IoHomeSharp } from 'react-icons/io5';
+import { FaDollarSign } from 'react-icons/fa';
 import { FiServer } from 'react-icons/fi';
 import Balance from '../../../Contexts/Balance';
 
@@ -24,7 +25,7 @@ const SideBar = ({ onNavigate }) => {
           'https://api.freecurrencyapi.com/v1/latest',
           {
             params: {
-              apikey: 'fca_live_GMPU66T3x9xtDWwrmyzkdHEn86CRD6KBjV2jqlub',
+              apikey: 'fca_live_15hBtQCwpwTDyi0PLfHHmHPhjQDfja2InJVt0Cuv',
               base_currency: 'USD',
               currencies: 'RUB,EUR',
             },
@@ -56,39 +57,76 @@ const SideBar = ({ onNavigate }) => {
   return (
     <aside className={clsx(styles.aside)}>
       <div className={clsx(styles.asideContent)} data-animate="fadeInLeft">
-        <div className={clsx(styles.asideBtns)}>
-          <a
-            href="#"
-            className={clsx(styles.asideBtnsLink)}
-            onClick={() => onNavigate('home')}
-          >
-            <IoHomeSharp
-              size={24}
-              color="rgba(255, 255, 255, 0.4)"
-              className={clsx(styles.asideBtnsLinkImg)}
-            />
-            Home
-          </a>
-          <a
-            href="#"
-            className={clsx(styles.asideBtnsLink)}
-            onClick={() => onNavigate('statistics')}
-          >
-            <FiServer
-              size={24}
-              color="rgba(255, 255, 255, 0.4)"
-              className={clsx(styles.asideBtnsLinkImg)}
-            />
-            Statistics
-          </a>
-        </div>
-        <div className={clsx(styles.asideContentBalance)}>
-          <h5 className={clsx(styles.asideContentBalanceTitle)}>
-            Your balance
-          </h5>
-          <span className={clsx(styles.asideContentBalanceItem)}>
-            ₴ {balance}
-          </span>
+        <div className={clsx(styles.asideBtnsBalance)}>
+          <div className={clsx(styles.asideBtns)}>
+            <a
+              href="#"
+              className={clsx(styles.asideBtnsLink)}
+              onClick={() => onNavigate('home')}
+            >
+              <IoHomeSharp
+                size={24}
+                color="rgba(255, 255, 255, 0.4)"
+                className={clsx(styles.asideBtnsLinkImg)}
+              />
+              Home
+            </a>
+            <a
+              href="#"
+              className={clsx(styles.asideBtnsLink)}
+              onClick={() => onNavigate('statistics')}
+            >
+              <FiServer
+                size={24}
+                color="rgba(255, 255, 255, 0.4)"
+                className={clsx(styles.asideBtnsLinkImg)}
+              />
+              Statistics
+            </a>
+          </div>
+          <div className={clsx(styles.asideBtnsMobile)}>
+            <a
+              href="#"
+              className={clsx(styles.asideBtnsMobileLink)}
+              onClick={() => onNavigate('home')}
+            >
+              <IoHomeSharp
+                size={24}
+                color="rgba(255, 255, 255, 0.4)"
+                className={clsx(styles.asideBtnsLinkImg)}
+              />
+            </a>
+            <a
+              href="#"
+              className={clsx(styles.asideBtnsLink)}
+              onClick={() => onNavigate('statistics')}
+            >
+              <FiServer
+                size={24}
+                color="rgba(255, 255, 255, 0.4)"
+                className={clsx(styles.asideBtnsLinkImg)}
+              />
+            </a>
+            <a
+              href="#"
+              className={clsx(styles.asideBtnsMobileLink)}
+              onClick={() => onNavigate('finances')}
+            >
+              <FaDollarSign
+                size={24}
+                color="rgba(255, 255, 255, 0.4)"
+                className={clsx(styles.asideBtnsLinkImg)}
+              />
+            </a>
+          </div>
+          <div className={clsx(styles.asideContentBalance, styles.asideMobileBalance)}>
+            <h5 className={clsx(styles.asideContentBalanceTitle)}>
+              Your balance
+            </h5>
+            <span className={clsx(styles.asideContentBalanceItem)}>
+              ₴ {balance}
+            </span>
+          </div>
         </div>
         <div className={clsx(styles.asideContentCurrencyExchange)}>
           <Table className={clsx(styles.tableCurrency)}>

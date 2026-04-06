@@ -11,6 +11,8 @@ import {
   Legend,
   Filler,
 } from 'chart.js';
+import styles from '../mainPage.module.css';
+import clsx from 'clsx';
 
 ChartJS.register(
   LineElement,
@@ -32,7 +34,7 @@ const CurrencyChart = () => {
           'https://api.freecurrencyapi.com/v1/latest',
           {
             params: {
-              apikey: 'fca_live_GMPU66T3x9xtDWwrmyzkdHEn86CRD6KBjV2jqlub',
+              apikey: 'fca_live_15hBtQCwpwTDyi0PLfHHmHPhjQDfja2InJVt0Cuv',
               base_currency: 'USD',
               currencies: 'RUB',
             },
@@ -152,7 +154,7 @@ const CurrencyChart = () => {
   };
 
   return (
-    <div style={{ width: 480, height: 180, overflow: 'hidden' }}>
+    <div className={clsx(styles.chartRates)}>
       <Line data={data} options={options} />
     </div>
   );

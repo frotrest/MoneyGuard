@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 
 export const useAnimateOnScroll = (deps = []) => {
+  
   useEffect(() => {
+    
     const elements = document.querySelectorAll('[data-animate]');
 
     const observer = new IntersectionObserver(

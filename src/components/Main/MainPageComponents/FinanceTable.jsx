@@ -16,7 +16,7 @@ import EditModal from './EditModal';
 import { FaPlus } from 'react-icons/fa6';
 
 const FinanceTable = () => {
-  const { transactions, setTransactions } = useContext(Balance);
+  const { transactions, setTransactions, balance } = useContext(Balance);
   const [open, setOpen] = useState(false);
   const [openEdit, setOpenEdit] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
@@ -53,6 +53,90 @@ const FinanceTable = () => {
         >
           <FaPlus size={20} color="white" />
         </button>
+        <div
+          className={clsx(
+            styles.asideContentBalance,
+            styles.asideFinanceBalance
+          )}
+          data-animate="fadeIn"
+        >
+          <h5 className={clsx(styles.asideContentBalanceTitle)}>
+            Your balance
+          </h5>
+          <span className={clsx(styles.asideContentBalanceItem)}>
+            ₴ {balance}
+          </span>
+        </div>
+        <div className={clsx(styles.financeCards)}>
+          {transactions.map((t, i) => (
+            <div
+              key={i}
+              className={clsx(styles.financeCard)}
+              data-animate="fadeIn"
+              style={{
+                borderLeft: `5px solid ${
+                  t.type === '+'
+                    ? 'rgba(255, 182, 39, 1)'
+                    : 'rgba(255, 134, 141, 1)'
+                }`,
+              }}
+            >
+              <div className={clsx(styles.financeCardRow)}>
+                <span className={clsx(styles.financeCardLabel)}>Date:</span>
+                <span className={clsx(styles.financeCardResponse)}>
+                  {t.date}
+                </span>
+              </div>
+              <div className={clsx(styles.financeCardRow)}>
+                <span className={clsx(styles.financeCardLabel)}>Type:</span>
+                <span className={clsx(styles.financeCardResponse)}>
+                  {t.type}
+                </span>
+              </div>
+              <div className={clsx(styles.financeCardRow)}>
+                <span className={clsx(styles.financeCardLabel)}>Category:</span>
+                <span className={clsx(styles.financeCardResponse)}>
+                  {t.category}
+                </span>
+              </div>
+              <div className={clsx(styles.financeCardRow)}>
+                <span className={clsx(styles.financeCardLabel)}>Comment:</span>
+                <span className={clsx(styles.financeCardResponse)}>
+                  {t.comment}
+                </span>
+              </div>
+              <div className={clsx(styles.financeCardRow)}>
+                <span className={clsx(styles.financeCardLabel)}>Sum:</span>
+                <span
+                  style={{
+                    color:
+                      t.type === '-'
+                        ? 'rgba(255, 134, 141, 1)'
+                        : 'rgba(255, 182, 39, 1)',
+                  }}
+                  className={clsx(styles.financeCardType)}
+                >
+                  {t.sum}
+                </span>
+              </div>
+              <div className={clsx(styles.financeCardActions)}>
+                <button
+                  className={clsx(styles.financeCardBtn)}
+                  onClick={() => openEditModal(i)}
+                >
+                  <FaPencilAlt size={14} />
+                  Edit
+                </button>
+                <button
+                  className={clsx(styles.financeCardBtn)}
+                  onClick={() => handleDelete(i)}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
         <Table className={clsx(styles.financeTable)}>
           <TableHead
             className={clsx(styles.financeTableHead)}

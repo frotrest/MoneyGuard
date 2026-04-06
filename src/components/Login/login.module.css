@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .loginPage {
+    box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(100px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
 .loginPageContent {
   display: flex;
   flex-direction: column;
@@ -38,6 +46,51 @@
   height: 454px;
 }
 
+
+@media (max-width: 768px) {
+  .loginBox {
+    box-shadow: none;
+    backdrop-filter: none;
+    background: none;
+    min-height: auto;
+    padding: 0px;
+  }
+
+  .loginBox::before {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    content: '';
+    filter: blur(200px);
+    background: rgba(47, 21, 176, 0.73);
+    width: 320px;
+    height: auto;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+  .loginBox {
+    padding: 0px;
+    backdrop-filter: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  .loginBox::before {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    content: '';
+    filter: blur(200px);
+    background: rgba(47, 21, 176, 0.73);
+    width: 320px;
+    height: 454px;
+  }
+}
+
 .loginBoxTitle {
   color: rgba(251, 251, 251, 1);
   font-family: 'Poppins';
@@ -47,6 +100,19 @@
   line-height: 40px;
   letter-spacing: 0%;
   margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .loginBoxTitle {
+    color: rgba(251, 251, 251, 1);
+    font-family: "Poppins";
+    font-style: Regular;
+    font-size: 19.11px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
 }
 
 .loginForm {
@@ -64,6 +130,12 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   padding-bottom: 10px;
   width: 400px;
+}
+
+@media (max-width: 768px) {
+  .loginFormLabel {
+    width: 280px;
+  }
 }
 
 .loginFormInput {
@@ -91,11 +163,9 @@
 .loginFormBtn {
   border-radius: 20px;
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 199, 39, 1) 0%,
-    rgba(158, 64, 186, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 199, 39, 1) 0%,
+      rgba(158, 64, 186, 1) 100%);
   border: none;
   padding: 15px 110px;
   color: rgba(251, 251, 251, 1);
