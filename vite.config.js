@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react, { reactCompilerPreset } from '@vitejs/plugin-react';
-import babel from '@rolldown/plugin-babel';
 import path from 'path';
 
 export default defineConfig({
@@ -15,7 +14,6 @@ export default defineConfig({
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
-    babel({ presets: [reactCompilerPreset()] }),
   ],
   optimizeDeps: {
     include: ['react', 'react-dom'],
