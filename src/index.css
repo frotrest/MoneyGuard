@@ -16,3 +16,15 @@ html {
   width: 1280px;
   margin: 0px auto;
 }
+
+@media (max-width: 1280px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 320px;
+  }
+}

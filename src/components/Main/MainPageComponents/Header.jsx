@@ -35,12 +35,13 @@ const Header = () => {
             >
               {currentUserName || 'Guest'}
             </a>
+            <RxExit size={18} color="rgba(255, 255, 255, 0.6)" onClick={() => setIsLogOut(true)} />
             <a
               href="#"
-              className={clsx(styles.manageProfileLink)}
+              className={clsx(styles.manageProfileLinkExit)}
               onClick={() => setIsLogOut(true)}
             >
-              <RxExit size={18} color="rgba(255, 255, 255, 0.6)" /> Exit
+              Exit
             </a>
           </div>
         </Container>

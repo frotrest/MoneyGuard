@@ -147,7 +147,13 @@ const EditModal = ({ open, onClose, transactionIndex }) => {
                 )}
               </div>
               {openSelect && (
-                <ul className={clsx(styles.selectList)}>
+                <ul
+                  className={clsx(
+                    styles.selectList,
+                    'animate__animated',
+                    'animate__fadeIn'
+                  )}
+                >
                   {categories.map((item, index) => (
                     <li
                       key={index}
