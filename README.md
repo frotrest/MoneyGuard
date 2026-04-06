@@ -5,7 +5,7 @@ Personal Finance Tracker is a adaptive single page application for tracking pers
 
 Provide a compact, usable interface for adding, editing, and deleting transactions.
 
-** I created an internal switch system in the application using if checks, but I’ll fix it in the future. **
+**I created an internal switch system in the application using if checks, but I’ll fix it in the future.**
 
 Serve as a portfolio piece showing frontend architecture, responsive design, and integration with third‑party services.
 
