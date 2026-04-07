@@ -1,6 +1,8 @@
 # Project Overview
 Personal Finance Tracker is a adaptive single page application for tracking personal income and expenses, viewing transaction history, and visualizing basic financial statistics and currency rates. The project is designed as a learning pet project that demonstrates practical React patterns, adaptive UI and integration with external APIs.
 
+**IMPORTANT! 🔴🚨** I made this application authorization using local storage since I didn't have an access to real databases, and cause of that there's a little bug: when you log in into your account, you don't instantly get all your transactions, to fix this you need  just refresh the page and all transactions will appear!
+
 ## Purpose
 
 Provide a compact, usable interface for adding, editing, and deleting transactions.
