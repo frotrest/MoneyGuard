@@ -31,28 +31,21 @@ const CurrencyChart = () => {
     const fetchRates = async () => {
       try {
         const res = await axios.get(
-          'https://api.freecurrencyapi.com/v1/latest',
-          {
-            params: {
-              apikey: 'fca_live_15hBtQCwpwTDyi0PLfHHmHPhjQDfja2InJVt0Cuv',
-              base_currency: 'USD',
-              currencies: 'RUB',
-            },
-          }
+          'https://api.exchangerate-api.com/v4/latest/USD'
         );
 
-        const rubRate = res.data.data.RUB;
+        const uahRate = res.data.rates.UAH;
 
         setHistory((prev) =>
           prev.length === 0
             ? [
-                rubRate * 0.96,
-                rubRate * 0.98,
-                rubRate,
-                rubRate * 1.02,
-                rubRate * 1.04,
+                uahRate * 0.96,
+                uahRate * 0.98,
+                uahRate,
+                uahRate * 1.02,
+                uahRate * 1.04,
               ]
-            : [...prev.slice(-4), rubRate]
+            : [...prev.slice(-4), uahRate]
         );
       } catch (error) {
         console.log('Error while receiving rates:', error);
