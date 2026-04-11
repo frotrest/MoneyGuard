@@ -22,24 +22,17 @@ const SideBar = ({ onNavigate }) => {
     const fetchRates = async () => {
       try {
         const response = await axios.get(
-          'https://api.freecurrencyapi.com/v1/latest',
-          {
-            params: {
-              apikey: 'fca_live_15hBtQCwpwTDyi0PLfHHmHPhjQDfja2InJVt0Cuv',
-              base_currency: 'USD',
-              currencies: 'RUB,EUR',
-            },
-          }
+          'https://api.exchangerate-api.com/v4/latest/USD'
         );
 
-        const rubRate = response.data.data.RUB;
-        const eurRate = response.data.data.EUR;
+        const uahRate = response.data.rates.UAH;
+        const eurRate = response.data.rates.EUR;
 
         setCurrencies([
           {
-            code: 'RUB',
-            purchase: rubRate * 0.99,
-            sale: rubRate * 1.01,
+            code: 'UAH',
+            purchase: uahRate * 0.99,
+            sale: uahRate * 1.01,
           },
           {
             code: 'EUR',
@@ -119,7 +112,12 @@ const SideBar = ({ onNavigate }) => {
               />
             </a>
           </div>
-          <div className={clsx(styles.asideContentBalance, styles.asideMobileBalance)}>
+          <div
+            className={clsx(
+              styles.asideContentBalance,
+              styles.asideMobileBalance
+            )}
+          >
             <h5 className={clsx(styles.asideContentBalanceTitle)}>
               Your balance
             </h5>
