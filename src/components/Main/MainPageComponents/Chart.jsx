@@ -67,6 +67,7 @@ const CurrencyChart = () => {
         data: history,
         fill: true,
         borderColor: 'rgba(255, 134, 141, 1)',
+        tension: 0.4,
         backgroundColor: (ctx) => {
           const chart = ctx.chart;
           const { ctx: canvasCtx, chartArea } = chart;
