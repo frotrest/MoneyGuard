@@ -60,16 +60,17 @@ const CurrencyChart = () => {
   if (history.length === 0) return null;
 
   const data = {
+    labels: history.map((_, i) => i),
     datasets: [
       {
         label: 'USD→UAH',
-        data: history.map((rate, i) => ({ x: i, y: rate })),
+        data: history,
         fill: true,
         borderColor: 'rgba(255, 134, 141, 1)',
         backgroundColor: (ctx) => {
           const chart = ctx.chart;
           const { ctx: canvasCtx, chartArea } = chart;
-          if (!chartArea) return null;
+          if (!chartArea) return 'transparent';
           const gradient = canvasCtx.createLinearGradient(
             0,
             chartArea.top,
@@ -122,17 +123,15 @@ const CurrencyChart = () => {
         displayColors: false,
         callbacks: {
           label: (context) => `Rate: ${context.parsed.y}`,
-          title: (context) => `Point ${context[0].parsed.x + 1}`,
+          title: (context) => `Point ${context[0].dataIndex + 1}`,
         },
       },
     },
     scales: {
       x: {
-        type: 'linear',
+        type: 'category',
         display: false,
         offset: false,
-        min: 0,
-        max: history.length - 1,
       },
       y: {
         display: false,
@@ -142,6 +141,7 @@ const CurrencyChart = () => {
     elements: {
       line: {
         tension: 0.4,
+        cubicInterpolationMode: 'monotone',
       },
     },
   };
