@@ -67,7 +67,6 @@ const CurrencyChart = () => {
         data: history,
         fill: true,
         borderColor: 'rgba(255, 134, 141, 1)',
-        tension: 0.4,
         backgroundColor: (ctx) => {
           const chart = ctx.chart;
           const { ctx: canvasCtx, chartArea } = chart;
@@ -86,8 +85,9 @@ const CurrencyChart = () => {
           gradient.addColorStop(1, 'rgba(57, 0, 150, 0.2)');
           return gradient;
         },
+        // Плавность задается здесь:
         cubicInterpolationMode: 'monotone',
-        tension: 0.4,
+        tension: 0.4, 
         pointBackgroundColor: '#fff',
         pointBorderColor: 'rgba(255, 134, 141, 1)',
         pointRadius: 8,
@@ -137,12 +137,6 @@ const CurrencyChart = () => {
       y: {
         display: false,
         beginAtZero: false,
-      },
-    },
-    elements: {
-      line: {
-        tension: 0.4,
-        cubicInterpolationMode: 'monotone',
       },
     },
   };
