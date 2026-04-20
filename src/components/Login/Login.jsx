@@ -19,7 +19,7 @@ const LoginPage = ({ isLogin, onRegister }) => {
   return (
     <>
       <section className={clsx(styles.loginPage)}>
-        <Container className={clsx(styles.loginPageContent)} data-animate="fadeIn">
+        <Container className={clsx(styles.loginPageContent)}>
           <div className={clsx(styles.loginBox)}>
             <img src={Logo} alt="logo" className={clsx(styles.loginBoxLogo)} />
             <h1 className={clsx(styles.loginBoxTitle)}>Money Guard</h1>
