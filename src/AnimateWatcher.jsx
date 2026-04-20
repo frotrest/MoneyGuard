@@ -24,7 +24,14 @@ export const useAnimateOnScroll = (deps = []) => {
 
     elements.forEach((el) => {
       const type = el.dataset.animate;
-      if (type) observer.observe(el);
+      if (type) {
+        observer.observe(el);
+
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add('animate__animated', `animate__${type}`);
+          observer.unobserve(el);
+        }
+      }
     });
 
     return () => observer.disconnect();
