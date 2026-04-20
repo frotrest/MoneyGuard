@@ -28,3 +28,7 @@ html {
     width: 320px;
   }
 }
+
+[data-animate] {
+  opacity: 0;
+}
