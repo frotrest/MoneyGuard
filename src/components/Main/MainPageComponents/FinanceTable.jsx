@@ -67,7 +67,7 @@ const FinanceTable = () => {
             ₴ {balance}
           </span>
         </div>
-        <div className={clsx(styles.financeCards)}>
+        <div className={clsx(styles.financeCards)} data-animate="fadeIn">
           {transactions.map((t, i) => (
             <div
               key={i}

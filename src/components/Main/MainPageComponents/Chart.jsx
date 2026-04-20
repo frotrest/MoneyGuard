@@ -86,9 +86,7 @@ const CurrencyChart = () => {
           gradient.addColorStop(1, 'rgba(57, 0, 150, 0.2)');
           return gradient;
         },
-        // Плавность задается здесь:
         cubicInterpolationMode: 'monotone',
-        tension: 0.4, 
         pointBackgroundColor: '#fff',
         pointBorderColor: 'rgba(255, 134, 141, 1)',
         pointRadius: 8,
