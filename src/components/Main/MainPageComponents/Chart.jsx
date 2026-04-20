@@ -87,7 +87,6 @@ const CurrencyChart = () => {
           return gradient;
         },
         cubicInterpolationMode: 'monotone',
-        tension: 0.4,
         pointBackgroundColor: '#fff',
         pointBorderColor: 'rgba(255, 134, 141, 1)',
         pointRadius: 8,
