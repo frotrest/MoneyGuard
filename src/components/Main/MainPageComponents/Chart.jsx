@@ -67,6 +67,7 @@ const CurrencyChart = () => {
         data: history,
         fill: true,
         borderColor: 'rgba(255, 134, 141, 1)',
+        tension: 0.4,
         backgroundColor: (ctx) => {
           const chart = ctx.chart;
           const { ctx: canvasCtx, chartArea } = chart;
@@ -95,7 +96,7 @@ const CurrencyChart = () => {
     ],
   };
 
-  const options = {
+const options = {
     responsive: true,
     maintainAspectRatio: false,
     clip: false,
@@ -136,12 +137,6 @@ const CurrencyChart = () => {
       y: {
         display: false,
         beginAtZero: false,
-      },
-    },
-    elements: {
-      line: {
-        tension: 0.4,
-        cubicInterpolationMode: 'monotone',
       },
     },
   };

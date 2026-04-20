@@ -72,7 +72,6 @@ const FinanceTable = () => {
             <div
               key={i}
               className={clsx(styles.financeCard)}
-              data-animate="fadeIn"
               style={{
                 borderLeft: `5px solid ${
                   t.type === '+'
