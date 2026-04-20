@@ -56,7 +56,7 @@ const RegisterPage = () => {
 
   return (
     <section className={clsx(styles.registerPage)}>
-      <Container className={clsx(styles.registerPageContent)} data-animate="fadeIn">
+      <Container className={clsx(styles.registerPageContent)}>
         <div className={clsx(styles.registerBox)}>
           <img src={Logo} alt="logo" className={clsx(styles.registerBoxImg)} />
           <h1 className={clsx(styles.registerBoxTitle)}>Money Guard</h1>
