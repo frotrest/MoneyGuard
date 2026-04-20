@@ -39,6 +39,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     if (!name || !password || !email || !confirmPassword) {
+      setAlertType('error');
       setIsAlert('Please fill in all fields');
       return;
     }
