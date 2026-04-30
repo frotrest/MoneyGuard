@@ -1,5 +1,5 @@
 .loginPage {
-  background: url('/src/assets/login-theme.png') no-repeat center center;
+  background: url('/src/assets/login-theme.webp') no-repeat center center;
   background-size: 210% auto;
   min-height: 100vh;
   display: flex;

@@ -75,11 +75,12 @@ const AuthProvider = ({ children }) => {
     setLoader(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    const exists = accounts.find((user) => user.email === email);
+    const exists = accounts.find((user) => user.email === email || user.name === name);
 
     if (exists) {
       setAlertType('error');
       setIsAlert('Account with this email already exists!');
+      setLoader(false);
       return;
     }
 

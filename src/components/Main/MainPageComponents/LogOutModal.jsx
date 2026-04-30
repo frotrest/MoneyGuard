@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useState, useContext, useEffect } from 'react';
 import AuthContext from '../../../Contexts/Auth';
 import { IoClose } from 'react-icons/io5';
-import Logo from '@assets/moneyguard.png';
+import Logo from '@assets/moneyguard.webp';
 import { Snackbar, Alert } from '@mui/material';
 
 const LogOutModal = ({ open, onClose }) => {

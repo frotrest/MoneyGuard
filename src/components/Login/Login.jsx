@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import styles from './login.module.css';
-import Logo from '@assets/moneyguard.png';
+import Logo from '@assets/moneyguard.webp';
 import { useState } from 'react';
 import Container from '../../Container';
 import { MdEmail } from 'react-icons/md';
@@ -18,7 +18,7 @@ const LoginPage = ({ isLogin, onRegister }) => {
   };
   return (
     <>
-      <section className={clsx(styles.loginPage)} data-animate="fadeIn">
+      <section className={clsx(styles.loginPage)}>
         <Container className={clsx(styles.loginPageContent)}>
           <div className={clsx(styles.loginBox)}>
             <img src={Logo} alt="logo" className={clsx(styles.loginBoxLogo)} />

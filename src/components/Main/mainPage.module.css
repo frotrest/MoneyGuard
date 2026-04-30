@@ -117,7 +117,7 @@ body {
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-  background: url('@assets/main-theme.png') repeat center / 300%;
+  background: url('@assets/main-theme.webp') repeat center / 300%;
 }
 
 @media (max-width: 1280px) {
@@ -125,7 +125,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 400px;
-    background: url('@assets/tablet-gradient.png') repeat-y center / 300%;
+    background: url('@assets/tablet-gradient.webp') repeat-y center / 300%;
   }
 }
 
@@ -134,7 +134,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    background: url('@assets/mobile-gradient.png') repeat center / 300%;
+    background: url('@assets/mobile-gradient.webp') repeat center / 300%;
   }
 }
 
