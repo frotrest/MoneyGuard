@@ -1,5 +1,5 @@
 .registerPage {
-  background: url('/src/assets/register-theme.png') no-repeat center center;
+  background: url('/src/assets/register-theme.webp') no-repeat center center;
   background-size: 210% auto;
   min-height: 100vh;
   display: flex;

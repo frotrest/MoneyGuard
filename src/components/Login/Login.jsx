@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import styles from './login.module.css';
-import Logo from '@assets/moneyguard.png';
+import Logo from '@assets/moneyguard.webp';
 import { useState } from 'react';
 import Container from '../../Container';
 import { MdEmail } from 'react-icons/md';

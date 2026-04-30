@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './register.module.css';
 import Container from '../../Container';
-import Logo from '@assets/moneyguard.png';
+import Logo from '@assets/moneyguard.webp';
 import { useContext, useState } from 'react';
 import { FaUserAlt, FaLock } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
@@ -14,6 +14,8 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [strength, setStrength] = useState(0);
+
+  
 
   const { register, setCurrentPage, setIsAlert, setAlertType } =
     useContext(AuthContext);

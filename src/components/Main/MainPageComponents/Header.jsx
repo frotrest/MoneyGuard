@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from '../mainPage.module.css';
 import Container from '../../../Container';
-import Logo from '@assets/moneyguard.png';
+import Logo from '@assets/moneyguard.webp';
 import { RxExit } from 'react-icons/rx';
 import AuthContext from '../../../Contexts/Auth';
 import { useContext, useState } from 'react';
