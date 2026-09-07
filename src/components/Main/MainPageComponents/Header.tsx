@@ -20,7 +20,7 @@ const Header: FC = () => {
   return (
     <>
       <LogOutModal open={isLogOut} onClose={() => setIsLogOut(false)} />
-      
+
       <header className={clsx(styles.header)}>
         <Container className={clsx(styles.headerContent)} dataAnimate="fadeIn">
           <div className={clsx(styles.logoBlock)}>
