@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
-        <BrowserRouter basename="Moneyguard">
+        <BrowserRouter basename="MoneyGuard">
           <App />
         </BrowserRouter>
       </PersistGate>
