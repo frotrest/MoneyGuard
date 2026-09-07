@@ -2,7 +2,7 @@
 
 Personal Finance Tracker is a responsive multipage application for tracking personal income and expenses, viewing transaction history, and visualizing basic financial statistics and currency rates. The project is designed as a learning pet project that demonstrates practical React patterns, adaptive UI and integration with external APIs.
 
-**IMPORTANT! 🔴🚨** I made this application authorization using local storage since I didn't have an access to real databases!
+**IMPORTANT! 🔴🚨** I made this application authorization using local storage since I didn't have access to real databases!
 
 ## Purpose
 
@@ -36,7 +36,7 @@ Sidebar navigation for switching pages.
 
 ## React for UI.
 
-TypeScript for typification.
+TypeScript for typing.
 
 MUI for UI primitives and useMediaQuery for responsive logic.
 
