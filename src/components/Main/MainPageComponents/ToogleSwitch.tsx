@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import clsx from 'clsx';
 import { FaPlus, FaMinus } from 'react-icons/fa6';
 import styles from '../mainPage.module.css';
-import type { ExpenseType } from '../../../store/slices/ModalSlice'; // Замени путь на свой, где лежит тип '+' | '-'
+import type { ExpenseType } from '../../../store/slices/ModalSlice';
 
 interface ToggleTypeProps {
   value: ExpenseType;
