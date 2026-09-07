@@ -38,6 +38,8 @@ Sidebar navigation for switching pages.
 
 TypeScript for typing.
 
+ReduxToolkit + ReduxPersistor for managing state.
+
 MUI for UI primitives and useMediaQuery for responsive logic.
 
 React-router - for navigation throughout the application.
@@ -61,7 +63,5 @@ Statistics — charts and aggregated data.
 CurrencyChart — chart component for currency visualization.
 
 useAnimateOnScroll — custom hook that observes [data-animate] elements.
-
-contexts or hooks — optional global state for transactions and balance.
 
 Keep DOM-manipulating logic inside useEffect.
