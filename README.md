@@ -1,8 +1,8 @@
 # Project Overview
 
-Personal Finance Tracker is a adaptive single page application for tracking personal income and expenses, viewing transaction history, and visualizing basic financial statistics and currency rates. The project is designed as a learning pet project that demonstrates practical React patterns, adaptive UI and integration with external APIs.
+Personal Finance Tracker is a responsive multipage application for tracking personal income and expenses, viewing transaction history, and visualizing basic financial statistics and currency rates. The project is designed as a learning pet project that demonstrates practical React patterns, adaptive UI and integration with external APIs.
 
-**IMPORTANT! 🔴🚨** I made this application authorization using local storage since I didn't have an access to real databases, and cause of that there's a little bug: when you log in into your account, you don't instantly get all your transactions, to fix this you need just refresh the page and all transactions will appear!
+**IMPORTANT! 🔴🚨** I made this application authorization using local storage since I didn't have an access to real databases!
 
 ## Purpose
 
@@ -24,7 +24,7 @@ Statistics: category summaries and charts for quick insights.
 
 Currency Rates: fetches latest exchange rates and shows purchase/sale values.
 
-Animations on Scroll: elements annotated with data-animate are animated when they enter the viewport using IntersectionObserver.
+Animations on Scroll: elements annotated with data-animate are animated when they enter the viewport using IntersectionObserver + FramerMotion.
 
 Accessible Actions: edit and delete actions per transaction with clear visual affordances.
 
@@ -38,7 +38,11 @@ Sidebar navigation for switching pages.
 
 ## React for UI.
 
+TypeScript for typification.
+
 MUI for UI primitives and useMediaQuery for responsive logic.
+
+React-router - for navigation throughout the application.
 
 axios for HTTP requests.
 
@@ -46,7 +50,7 @@ CSS Modules for scoped styling.
 
 Chart library (Chart.js ) for graphs.
 
-IntersectionObserver for scroll-triggered animations.
+IntersectionObserver + FramerMotion for scroll-triggered animations.
 
 App / MainPage — layout wrapper with Header, SideBar, and a Routes area.
 
